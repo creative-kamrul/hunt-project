@@ -1,52 +1,1324 @@
 *{
     margin: 0;
     padding: 0;
+    outline: 0;
 }
 h1,h2,h3,h4,h5,h6{
     margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 ol,ul{
     list-style: none;
 }
 
+
 a,a:hover,a:focus{
     text-decoration: none;
 }
 
-
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    outline: 0;
+}
+.title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.title h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+.title p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    width: 550px;
+    margin: 0 auto;
+}
 
 /* ============================================================================================
                                          manu start 
 ================================================================================================ */
 
 nav{
-    background: #000;
+    position: absolute !important;
+    width: 100%;
+    z-index: 99;
+    background: transparent;
+    padding: 0 !important;
+    padding: 25px 0px !important;
+    border-bottom: .5px solid #fec600;
 }
 nav button i{
     color: #fff;
 }
-
-
+nav .navbar-brand{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+nav .navbar-brand img{
+    /* margin: 10px; */
+}
+nav .navbar-collapse ul li{
+    margin-left: 15px;
+    font-size: 16px;
+}
+nav .navbar-collapse ul li a{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    transition: .4s;
+    position: relative;
+}
+nav .navbar-collapse ul .active a{
+   color: #fec600;
+}
+nav .navbar-collapse ul .active a::after{
+    width: 100%;
+}
+/*============================== nav hover and after start======================== */
+nav .navbar-collapse ul li a::after{
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #fec600;
+    content: "";
+    transition: .4s;
+}
+nav .navbar-collapse ul li:hover a{
+    color: #fec600;
+}
+nav .navbar-collapse ul li:hover a::after{
+    width: 100%;
+}
+.fixed{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    background: #222;
+    z-index: 9999 !important;
+    border-color: #222;
+    padding: 10px !important;
+    transition: 1s;
+}
+.fixed .navbar-collapse ul li a::after{
+    bottom: -17px;
+}
 /* ============================================================================================
                                          manu end 
 ================================================================================================ */
 
+/* ============================================================================================
+                                         banner start 
+================================================================================================ */
 #bannnerPart{
-
+    
 }
 #bannnerPart .bannerSlide{
-    background: url(../images/banner.png);
-    height: 600px;
+    background: url(../images/banner.png) no-repeat center;
+    background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
 }
+#bannnerPart .slide2{
+    background: url(../images/banner1.png) no-repeat center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+}
+#bannnerPart .bannerSlide .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+    padding-bottom: 190px;
+}
+#bannnerPart .bannerSlide .overlay h3{
+    padding-top: 240px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: #fff;
+}
+#bannnerPart .bannerSlide .overlay h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    color: #fec600;
+    margin: 7px;
+}
+#bannnerPart .bannerSlide .overlay p{
+    font-family: 'Open Sans', sans-serif;
+    color: #f1f1f1;
+    font-size: 14px;
+    line-height: 24px;
+    width: 550px;
+    margin: 0 auto;
+}
+#bannnerPart .bannerSlide .overlay a{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    color: #fff;
+    margin-top: 60px;
+    margin-left: 15px;
+    border: 1px solid #fff;
+    transition: .4s;
+}
+#bannnerPart .bannerSlide .overlay a:hover{
+    background: #fec600;
+    color: #111;
+    border: 1px solid #fec600;
+}
+/* ============= banner icon========== */
+.bnrprev{
+    padding: 15px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 48px;
+    z-index: 999;
+    cursor: pointer;
+    transition: .4s;
+}
+.bnrnext{
+    padding: 15px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 48px;
+    z-index: 999;
+    cursor: pointer;
+    transition: .4s;
+}
+.bnrprev:hover{
+    background: #fec600;
+}
+.bnrnext:hover{
+    background: #fec600;
+}
+/* ============================================================================================
+                                         banner end 
+================================================================================================ */
+/* ============================================================================================
+                                         about start 
+================================================================================================ */
+#aboutPart{
+   padding-top: 110px;
+}
+#aboutPart .item{
+    text-align: center;
+    background: #f1f1f1;
+    padding: 35px;
+    position: relative;
+    margin-bottom: 50px;
+    transition: .4s;
+}
+#aboutPart .item h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#aboutPart .item p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    width: 297px;
+    margin: 0 auto;
+}
+#aboutPart .item .shape{
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    border-radius: 5px;
+    transform: rotate(45deg) translateY(50%);
+    z-index: 0;
+}
+#aboutPart .item .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #444444;
+    position: absolute;
+    bottom: -51px;
+    left: 49%;
+    transform: translateY(50%);
+    transition: .4s;
+    z-index: 1;
+}
+#aboutPart .item2{
+    text-align: right;
+    background: #f1f1f1;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 50px;
+    transition: .4s;
+    margin-top: 85px;
+    margin-right: 29px;
+}
+#aboutPart .item2 h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#aboutPart .item2 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    width: 304px;
+    margin: 0 auto;
+}
+#aboutPart .item2 .shape{
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    border-radius: 5px;
+    transform: translate(50%,-50%) rotate(45deg);
+    z-index: -1;
+}
+#aboutPart .item2 .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #444444;
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    transition: .4s;
+    z-index: 1;
+}
+#aboutPart .item3{
+    text-align: left;
+    background: #f1f1f1;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 50px;
+    transition: .4s;
+    margin-top: 85px;
+    margin-left: 40px;
+}
+#aboutPart .item3 h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#aboutPart .item3 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    width: 290px;
+    margin: auto;
+}
+#aboutPart .item3 .shape{
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    border-radius: 5px;
+    transform: translate(50%,-50%) rotate(45deg);
+}
+#aboutPart .item3 .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #444444;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+    transition: .4s;
+    z-index: 1;
+}
+#aboutPart .item4{
+    text-align: center;
+    background: #f1f1f1;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 50px;
+    transition: .4s;
+    margin-top: 54px;
+}
+#aboutPart .item4 h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#aboutPart .item4 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    width: 307px;
+    margin: auto 0px;
+}
+#aboutPart .item4 .shape{
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+#aboutPart .item4 .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #444444;
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: .4s;
+    z-index: 1;
+}
 
+#aboutPart .roundimg{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+#aboutPart .roundimg .imge{
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#aboutPart .roundimg .imge img{
+    width: 152%;
+    margin-left: -74px;
+}
+/* ======================= about hover start================================  */
+#aboutPart .item:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item:hover .circle{
+    background: #fec600;
+}
+#aboutPart .item2:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item2:hover .circle{
+    background: #fec600;
+}
+#aboutPart .item3:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item3:hover .circle{
+    background: #fec600;
+}
+#aboutPart .item4:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item4:hover .circle{
+    background: #fec600;
+}
 
+/* ============================================================================================
+                                         about end 
+================================================================================================ */
+/* ============================================================================================
+                                         Protfolio Start 
+================================================================================================ */
+#protfolio{
+    background: url(../images/protbg.png) no-repeat center;
+    background-size: cover;
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+}
+#protfolio .title h3{
+    color: #fff;
+}
+#protfolio .title p{
+    color: #fff;
+}
+#protfolio .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    padding: 150px 0;
+}
+#protfolio .overlay .item{
+    margin-right: 20px;
+    width: 255px;
+}
+#protfolio .overlay .item .suto{
+    margin-bottom: 20px;
+    position: relative;
+}
+#protfolio .overlay .item .suto img{
+    width: 100%;
+}
+#protfolio .overlay .item .suto .overlay2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+ }
+ #protfolio .overlay .item .suto .overlay2 .icn{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: #fff;
+     color: #444;
+     font-size: 18px;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0;
+     transition: .4s;
+ }
+ #protfolio .overlay .item .suto .overlay2 .icn a{
+    color: #444444;
+}
+#protfolio .overlay .item .boro{
+    margin-bottom: 20px;
+    position: relative;
+}
+#protfolio .overlay .item .boro img{
+    width: 100%;
+}
+#protfolio .overlay .item .boro .overlay2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+ }
+ #protfolio .overlay .item .boro .overlay2 .icn{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: #fff;
+     color: #444;
+     font-size: 18px;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0;
+     transition: .4s;
+ }
+ #protfolio .overlay .item .boro .overlay2 .icn a{
+     color: #444444;
+ }
+ .vbox-container img {
+    width: 25%;
+    height: auto;
+}
+/* ==========================portfolio hover start=========================== */
+#protfolio .overlay .item .suto:hover .overlay2{
+    height: 100%;
+ }
+ #protfolio .overlay .item .suto:hover .overlay2 .icn{
+     opacity: 1;
+ }
+ #protfolio .overlay .item .boro:hover .overlay2{
+    height: 100%;
+ }
+ #protfolio .overlay .item .boro:hover .overlay2 .icn{
+     opacity: 1;
+ }
+/* ============================================================================================
+                                         Protfolio end 
+================================================================================================ */
+/* ============================================================================================
+                                         service Start 
+================================================================================================ */
+#service{
+    padding-top: 20px;
+}
+#service .title{
+    margin-bottom: 50px;
+}
+#service .slideup{
+    position: relative;
+    margin-top: 80px;
+   
+}
+#service .slideup::after{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 1px;
+    height: 104%;
+    background: url(../images/line1.png) no-repeat center;
+    content: "";
+    z-index: -1;
+}
+#service .part1{
+    text-align: right;
+}
+#service .part1 h3{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #111;
+    margin-top: 106px;
+}
+#service .part2{
+    display: flex;
+    justify-content: center;
+}
+#service .part2 .img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    margin-top: 81px;
+    text-align: center;
+}
+#service .part2 img{
+    width: 60%;
+    margin-top: 18px;
+    margin-left: 15px;
+}
+#service .part3{
+    position: relative;
+}
+#service .part3 .shape{
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translate(-50%,-50%) rotate(45deg);
+    border-radius: 5px;
+}
+#service .part3 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    background: #f1f1f1;
+    padding: 50px 30px;
+    width: 470px;
+}
+#service .part4{
+    position: relative;
+    text-align: right;
+}
+#service .part4 .shape{
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translate(50%,-50%) rotate(45deg);
+    border-radius: 5px;
+}
+#service .part4 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    background: #f1f1f1;
+    padding: 50px 30px;
+    width: 470px;
+}
+#service .part5{
+    display: flex;
+    justify-content: center;
+}
+#service .part5 .img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    margin-top: 107px;
+    text-align: center;
+}
+#service .part5 img{
+    width: 60%;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+#service .part6{
+    text-align: left;
+}
+#service .part6 h3{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #111;
+    margin-top: 136px;
+}
+#service .slick-vertical .slick-slide{
+   border: 0px;
+}
+#service .slideup .slick-center .img{
+   transform: scale(1.2);
+   background: #fec600;
+}
+/* ==================== service part icon================= */
+.srvcup{
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid #000;
+    position: absolute;
+    top: -13%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    color: #000;
+    cursor: pointer;
+    transition: .4s;
+}
+.srvcdown{
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid #000;
+    position: absolute;
+    bottom: -92px;
+    right: 50%;
+    transform: translate(50%,-50%);
+    color: #000;
+    cursor: pointer;
+    transition: .4s;
+}
+.srvcup:hover{
+    background: #fec600;
+    border: 1px solid #fec600;
+}
+.srvcdown:hover{
+    background: #fec600;
+    border: 1px solid #fec600;
+}
+/* ============================================================================================
+                                         service end 
+================================================================================================ */
+/* ============================================================================================
+                                         testimonial start 
+================================================================================================ */
 
+#testimonial{
+    margin-top: 100px;
+   background: url(../images/testimonial_bg.png) no-repeat center;
+   background-size: cover;
+   clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+}
+#testimonial .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 150px 0px;
+}
+#testimonial .overlay .imgslide{
+    position: relative;
+}
+#testimonial .overlay .imgslide .img{
+    width: 105px !important;
+    height: 105px;
+    border-radius: 50%;
+    background: #bebebe;
+    margin-top: 30px;
+    overflow: hidden;
+    opacity: .8 !important;
+    transform: scale(.8);
+    position: static !important;
+    left: 0 !important;
+    z-index: 999 !important;
+    
+}
+#testimonial .overlay .imgslide::after{
+    position: absolute;
+    top: -18px;
+    left: 49px;
+    background: url(../images/line2.png) no-repeat center;
+    width: 1px;
+    height: 110%;
+    content: "";
+    z-index: -1;
+}
+#testimonial .overlay .imgslide .img img{
+    width: 100%;
+    margin-top: 5px;
+}
+#testimonial .overlay .imgslide .slick-center{
+    transform: scale(1);
+    background: #fec600;
+}
+#testimonial .overlay .textslider .item{
+    background: #f1f1f1;
+    padding: 60px 30px;
+    margin-top: 65px;
+    position: relative;
+    margin-left: 40px;
+}
+#testimonial .overlay .textslider .item h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #111111;
+}
+#testimonial .overlay .textslider .item ul{
+    margin-bottom: 3px;
+}
+#testimonial .overlay .textslider .item ul li{
+    display: inline-block;
+    color: #fec600;
+}
+#testimonial .overlay .textslider .item h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #111111;
+}
+#testimonial .overlay .textslider .item p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    width: 781px;
+    margin-top: 15px;
+}
+#testimonial .overlay .textslider .item .img{
+    text-align: right;
+    width: 100px;
+    margin-left: auto;
+}
+#testimonial .overlay .textslider .item .img img{
+    width: 100%;
+}
+#testimonial .overlay .textslider .item .shape{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+/* ======================testimonial part icon============== */
+.tup{
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: -22%;
+    left: 27%;
+    transform: translate(-50%,50%);
+    z-index: 999;
+    color: #fff;
+    cursor: pointer;
+    transition: .4s;
+}
+.tdown{
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    position: absolute;
+    bottom: -105px;
+    right: 74%;
+    transform: translate(50%,-50%);
+    z-index: 999;
+    cursor: pointer;
+    transition: 4s;
+}
+.tup:hover{
+    background: #fec600;
+    border: 1px solid #fec600;
+}
+.tdown:hover{
+    background: #fec600;
+    border: 1px solid #fec600;
+}
 
+/* ============================================================================================
+                                         testimonial end 
+================================================================================================ */
+/* ============================================================================================
+                                         pricing start 
+================================================================================================ */
+#pricing{
+    padding-top: 50px;
+}
+#pricing .item{
+    text-align: center;
+    position: relative;
+    background: #f1f1f1;
+    transition: .4s;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#pricing .item .price_heading{
+    background: #444444;
+    clip-path: polygon(0px 0px, 100% 0, 100% 64%, 0 90%);
+    transition: .4s;
+}
+#pricing .item .price_heading h3{
+    padding-top: 30px;
+    color: #fff;
+    padding-bottom: 100px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    transition: .4s;
+}
+#pricing .item .pricing_circle{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #444444;
+    border-radius: 50%;
+    position: absolute;
+    background: #fff;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .4s;
 
+}
+#pricing .item .pricing_circle .pricing_circle2{
+    width: 90px;
+    height: 90px;
+    background: #444444;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-top: 3.5px;
+    transition: .4s;
+}
+#pricing .item .pricing_circle .pricing_circle2 p{
+    font-size: 29px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    margin-bottom: -12px;
+    padding-top: 10px;
+    
+}
+#pricing .item .pricing_circle .pricing_circle2 .per{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+#pricing .item ul{
+    margin-top: 40px;
+}
+#pricing .item ul li{
+    color: #444444;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 35px;
+}
+#pricing .item .btn{
+    clip-path: polygon(0 36%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background: #444444;
+    width: 100%;
+}
+#pricing .item .btn a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    
+}
+/* ==================hover================== */
+#pricing .item:hover{
+    filter: drop-shadow(0px 0px 3px #bdb3b3);
+}
+#pricing .item:hover .price_heading{
+    background: #fec600;
+}
+#pricing .item:hover .price_heading h3{
+    color: #444444;
+}
+#pricing .item:hover .pricing_circle{
+    border: 1px solid #fec600;
+}
+#pricing .item:hover .pricing_circle .pricing_circle2{
+    background: #fec600;
+}
+#pricing .item:hover .pricing_circle .pricing_circle2 p{
+    color: #444444;
+}
+#pricing .item:hover .btn{
+    background: #fec600;
+}
+#pricing .item:hover .btn a{
+    color: #444444;
+}
+/* ============================================================================================
+                                         pricing end 
+================================================================================================ */
+/* ============================================================================================
+                                         counrt start 
+================================================================================================ */
 
+#counter{
+   background: url(../images/counterbg.png) no-repeat center;
+   background-size: cover;
+   background-attachment: fixed;
+   margin-top: 75px;
+    transform: skewY(-3deg);
+}
+#counter .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+}
+#counter .overlay .item{
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+#counter .overlay .item h2{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+#counter .overlay .item p{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/* ============================================================================================
+                                         counrt end 
+================================================================================================ */
+/* ============================================================================================
+                                         team start 
+================================================================================================ */
+#teamPart{
+    padding-top: 50px;
+}
+#teamPart .member{
 
+}
+#teamPart .member .item{
+   width: 280px;
+   border: 1px solid #bebebe;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+#teamPart .member .item .image{
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+    background: #f1f1f1;
+    height: 350px;
+    text-align: center;
+    position: relative;
+}
+#teamPart .member .item .image img{
+    width: 80%;
+    padding-top: 10px;
+    margin-left: 30px;
+}
+#teamPart .member .item .image .overrlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(254, 198, 0, .6);
+    transition: .4s;
+}
+#teamPart .member .item .image .overrlay .icn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: #444;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .4s;
+}
+#teamPart .member .item .image .overrlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#teamPart .member .item .image .overrlay .icn a{
+    color: #444444;
+}
+#teamPart .member .item .text{
+    text-align: center;
+    padding-bottom: 50px;
+}
+#teamPart .member .item .text h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #111111;
+}
+#teamPart .member .item .text p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #111111;
+    margin-top: 10px;
+}
+#teamPart .member .item .text .sicon{
+    margin-bottom: -60px;
+    transition: .4s;
+    position: relative;
+}
+#teamPart .member .item .text .sicon ul{
+    position: absolute;
+    top: -50px;
+    left: 35px;
+    transition: .4s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#teamPart .member .item .text .sicon ul li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #444444;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: .4s;
+}
+#teamPart .member .item .text .sicon ul li a{
+   color: #444444;
+   display: inline-block;
+   margin-top: 7px;
+}
+/* =========================team part hover=============== */
+#teamPart .member .item:hover .image .overrlay{
+    height: 100%;
+}
+#teamPart .member .item:hover .image .overrlay .icn{
+    opacity: 1;
+}
+#teamPart .member .item:hover .text .sicon{
+    margin-bottom: 0px;
+}
+#teamPart .member .item:hover .text .sicon ul{
+    top: 0;
+    opacity: 1;
+}
+#teamPart .member .item .text .sicon ul li:hover{
+    background: #fec600;
+    border: 1px solid #fec600;
+}
+/* ============================================================================================
+                                         team end 
+================================================================================================ */
+/* ============================================================================================
+                                         add start 
+================================================================================================ */
+#addPart{
+    margin-top: 80px;
+    background: #f1f1f1;
+    padding: 30px 0;
+    transform: skewY(-3deg);
+}
+#addPart .aditem{
+    display: flex;
+    justify-content: space-between;
+}
+#addPart .aditem .img{
+    width: 215px;
+    padding: 35px 0;
+    border: 1px solid #bebebe;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#addPart .aditem .img img{
+    width: 80%;
+    margin-left: 20px;
+}
+#addPart button{
+    border-width: 0;
+}
+#addPart .aditem .slick-center{
+    border: 1px solid #fec600;
+}
 
+/* ============================================================================================
+                                         add end 
+================================================================================================ */
+/* ============================================================================================
+                                         footer start 
+================================================================================================ */
+.btop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    font-size: 15px;
+    background: #fec600;
+    color: #fff;
+    z-index: 9999;
+}
+#footerPart{
+    background: #222222;
+   position: relative;
+   margin-top: 100px;
+}
+#footerPart .flogo{
+    transform: skewY(-3deg);
+    background: #222222;
+    border: 1px solid #444;
+    position: absolute;
+    top: -98px;
+    width: 100%;
+}
+#footerPart .flogo .img{
+    text-align: center;
+    padding: 50px 0;
+    transform: skewY(3deg);
+}
+#footerPart .addres{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+#footerPart .addres .item {
+    text-align: center;
+    border-right: 1px solid #bebebe;
+}
+#footerPart .addres .item .icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fec600;
+    margin: 15px auto;
+}
+#footerPart .addres .item .icon .locatin{
+    color: #444;
+    font-size: 15px;
+    margin-top: 8px;
+}
+#footerPart .addres .item .ltn{
+    margin-bottom: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+
+}
+#footerPart .social{
+    text-align: center;
+    padding-bottom: 30px;
+}
+#footerPart .social h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+#footerPart .social ul li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: #444444;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: .4s;
+}
+#footerPart .social ul li a{
+    color: #444444;
+    margin-top: 7px;
+    display: inline-block;
+}
+#footerPart .copyr{
+    text-align: center;
+    background: #444444;
+    padding: 20px;
+}
+#footerPart .copyr p{
+ color: #f1f1f1;
+ font-size: 14px;
+}
+#footerPart .copyr p span{
+    color: #fec600;
+}
+/* =================================footer hover======================== */
+#footerPart .social ul li:hover{
+    background: #fec600;
+    cursor: pointer;
+}
+/* ============================================================================================
+                                         footer end 
+================================================================================================ */
 
 
 
