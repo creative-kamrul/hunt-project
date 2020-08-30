@@ -590,7 +590,7 @@ box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
                                          service Start 
 ================================================================================================ */
 #service{
-    padding-top: 20px;
+    padding-top: 80px;
 }
 #service .title{
     margin-bottom: 50px;
@@ -602,13 +602,16 @@ box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
 }
 #service .slideup::after{
     position: absolute;
-    top: -15px;
+    top: 6px;
     left: 50%;
     width: 1px;
-    height: 104%;
-    background: url(../images/line1.png) no-repeat center;
+    height: 100%;
+    background: url(../images/line1.png) center;
     content: "";
     z-index: -1;
+}
+#service .slideup .lghide{
+    display: none;
 }
 #service .part1{
     text-align: right;
@@ -901,7 +904,7 @@ box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
                                          pricing start 
 ================================================================================================ */
 #pricing{
-    padding-top: 50px;
+    padding-top: 80px;
 }
 #pricing .item{
     text-align: center;
@@ -1055,7 +1058,7 @@ box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
                                          team start 
 ================================================================================================ */
 #teamPart{
-    padding-top: 50px;
+    padding-top: 80px;
 }
 #teamPart .member{
 
@@ -1069,7 +1072,7 @@ box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
 #teamPart .member .item .image{
     clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
     background: #f1f1f1;
-    height: 350px;
+    height: 280px;
     text-align: center;
     position: relative;
 }

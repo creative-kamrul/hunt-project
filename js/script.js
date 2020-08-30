@@ -7,8 +7,9 @@
       section.forEach((item)=>{
        if(item.offsetTop <= sposition){
          const id = item.id
-        //  document.querySelector(".active").classList.remove("active")
-        //  document.querySelector(`a[href*=${id}]`).parentNode.classList.add("active")
+         document.querySelector(".active").classList.remove("active")
+         document.querySelectorAll(`a[href*=${id}]`).parentNode.classList.add("active")
+         console.log(item)
         
        }
       })
@@ -16,6 +17,14 @@
   }
   spyscrll(),
 
+
+
+
+
+  // =======================================================
+  $(".navbar-collapse a").click(function(){
+    $(".navbar-collapse").collapse('hide')
+  })
 
 $(window).scroll(function(){
   var scrollamount = $(window).scrollTop()
@@ -55,12 +64,12 @@ $('#bannnerPart').slick({
     cssEase: 'linear',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 992,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -99,23 +108,23 @@ $('#bannnerPart').slick({
     autoplaySpeed: 1000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 575,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
@@ -153,19 +162,24 @@ $('#bannnerPart').slick({
     focusOnSelect: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true
+          vertical: true,
+         verticalSwiping: true,
+         centerMode: true,
+         centerPadding: '0px',
+         focusOnSelect: true,
+          dots: false
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
@@ -207,12 +221,12 @@ $('#bannnerPart').slick({
     asNavFor: '.textslider',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -292,19 +306,19 @@ $('.member').slick({
   // autoplaySpeed: 1000,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 992,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: false
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 767,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1
       }
     },
     {
@@ -336,23 +350,23 @@ $('.aditem').slick({
   autoplaySpeed: 1000,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
+        slidesToScroll: 1
       }
     },
     {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
+      breakpoint: 575,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1

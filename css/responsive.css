@@ -1,8 +1,6 @@
 @media (min-width:320px) and (max-width:575px){
 
 /* ============= manu bar responsive css start=============== */
-    nav{
-    }
     .fixed{
         background-color: #222;
         border-color: #080808;
@@ -59,7 +57,6 @@
     left: 38px; 
 }
 /* ============= banner responsive css end=============== */
-
 #aboutPart {
     padding-top: 30px;
     border-top: 1px solid #bebebe;
@@ -70,7 +67,6 @@
     padding: 0 15px;
     width: auto;
 }
-
 #aboutPart .item{
     margin: 15px;
 }
@@ -147,8 +143,6 @@
     display: none;
 }
 /* =========protfolio responsive start============ */
-
-
 #protfolio{
     clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
@@ -170,12 +164,24 @@
     /* border-bottom: 1px solid #bebebe;
     box-shadow: -1px 0px 5px 1px rgba(0,0,0,0.75); */
 }
+#service .item2{
+    position: relative;
+}
+#service .item4{
+    position: relative;
+}
 #service .title p{
     width: auto;
     padding: 0 15px;
 }
 #service .slideup::after{
     display: none;
+}
+#service .slideup .lghide{
+    display: block;
+}
+#service .slideup .smhide{
+   display: none !important;
 }
 #service .part1{
     text-align: center;
@@ -239,7 +245,11 @@
 }
 #testimonial .overlay .imgslide .img {
     transform: scale(.6);
-    margin-left: 2px;
+    margin-left: auto;
+}
+#testimonial .overlay .imgslide{
+    width: 320px;
+    margin: 0 auto;
 }
 #testimonial .overlay .imgslide .slick-center{
     transform: scale(0.8);
@@ -281,19 +291,13 @@
 #pricing .item{
     margin-bottom: 10px;
 }
-
 /* =========pricing responsive end============ */
 /* =========counter responsive start============ */
 #counter .overlay .item{
     width: 136px;
     padding: 20px 0px;
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
     transform: skewX(3deg);
-}
-#counter .overlay .lc{
-    margin-left: 80px;
+    margin: 10px auto;
 }
 /* =========team responsive start============ */
 #teamPart .title p{
@@ -317,11 +321,11 @@
 }
 /* ============================================= 320-575 device end====================================== */
 
+/* ============================================= 576-767 device start====================================== */
+
 @media (min-width:576px) and (max-width:767px){
 
     /* ============= manu bar responsive css start=============== */
-        nav{
-        }
         .fixed{
             background-color: #222;
             border-color: #080808;
@@ -378,7 +382,6 @@
         left: 38px; 
     }
     /* ============= banner responsive css end=============== */
-    
     #aboutPart {
         padding-top: 30px;
         border-top: 1px solid #bebebe;
@@ -389,7 +392,6 @@
         padding: 0 15px;
         width: auto;
     }
-    
     #aboutPart .item{
         margin: 15px;
     }
@@ -466,8 +468,6 @@
         display: none;
     }
     /* =========protfolio responsive start============ */
-    
-    
     #protfolio{
         clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
     }
@@ -478,23 +478,23 @@
     #protfolio .overlay{
         padding: 60px 0;
     }
-    
     #protfolio .overlay .pslide{
         margin-left: 20px;
     }
-    
     /* =========protfolio responsive end============ */
     /* =========service responsive start============ */
-    #service{
-        /* border-bottom: 1px solid #bebebe;
-        box-shadow: -1px 0px 5px 1px rgba(0,0,0,0.75); */
-    }
     #service .title p{
         width: auto;
         padding: 0 15px;
     }
     #service .slideup::after{
         display: none;
+    }
+    #service .slideup .lghide{
+        display: block;
+    }
+    #service .slideup .smhide{
+       display: none !important;
     }
     #service .part1{
         text-align: center;
@@ -557,8 +557,9 @@
         padding: 110px 0;
     }
     #testimonial .overlay .imgslide .img {
+        width: 30%;
         transform: scale(.8);
-        margin-left: 2px;
+        margin-left: 14px;
     }
     #testimonial .overlay .imgslide .slick-center{
         transform: scale(1);
@@ -567,7 +568,8 @@
     #testimonial .overlay .imgslide::after{
         display: none;
     }
-    #testimonial .overlay .textslider{
+    #testimonial .overlay .jamela{
+        margin: 0 auto;
     }
     #testimonial .overlay .textslider .item{
         margin-top: 110px;
@@ -607,13 +609,14 @@
     #counter .overlay .item{
         width: 136px;
         padding: 20px 0px;
-        margin-left: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
         transform: skewX(3deg);
+        margin: 10px auto;
     }
-    #counter .overlay .lc{
-        margin-left: 80px;
+    #counter .overlay .cml1{
+        margin-right: 15px;
+    }
+    #counter .overlay .cml2{
+        margin-left: 20px;
     }
     /* =========team responsive start============ */
     #teamPart .title p{
@@ -635,11 +638,669 @@
     }
     /* =========footer responsive end============ */
     }
+/* ============================================= 576-767 device end====================================== */
 
+@media (min-width:768px) and (max-width:991px){
 
+    /* ============= manu bar responsive css start=============== */
+        .fixed{
+            background-color: #222;
+            border-color: #080808;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+        }
+        nav .navbar-collapse{
+            text-align: center;
+        }
+        nav ul{
+            background: #222;
+            width: 90%;
+            margin: auto;
+        }
+        nav .navbar-nav .nav-link{
+            display: inline-block;
+        }
+        nav .navbar-collapse ul li a::after{
+            bottom: 0;
+        }
+        .fixed .navbar-collapse ul li a::after {
+            bottom: 0px;
+        }
+    /* ============= manu bar responsive css end=============== */
+    /* ============= banner responsive css start=============== */
+    #banner{
+        width: auto;
+    }
+    #bannnerPart .bannerSlide{
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+    }
+    #bannnerPart .bannerSlide .overlay{
+        padding-bottom: 100px;
+    }
+    #bannnerPart .bannerSlide .overlay h3{
+        font-size: 30px;
+        padding-top: 200px;
+    }
+    #bannnerPart .bannerSlide .overlay h1{
+        font-size: 45px;
+    }
+    #bannnerPart .bannerSlide .overlay p{
+        width: auto;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+    .bnrnext{
+        padding: 10px;
+        top: 44%;
+        right: 29px;
+    }
+    .bnrprev{
+        padding: 10px;
+        top: 44%;
+        left: 38px; 
+    }
+    /* ============= banner responsive css end=============== */
+    #aboutPart {
+        padding-top: 30px;
+        border-top: 1px solid #bebebe;
+        box-shadow: -1px 0px 5px 1px rgba(0,0,0,0.75);
+        text-align: center;
+    }
+    #aboutPart .title p{
+        padding: 0 70px;
+        width: auto;
+    }
+    #aboutPart .item{
+        margin: 15px auto;
+        width: 250px;
+        padding: 20px 12px;
+    }
+    #aboutPart .item:hover{
+        box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+    }
+    #aboutPart .item p{
+        width: auto;
+    }
+    #aboutPart .item .shape{
+        display: block;
+        bottom: 0px;
+        z-index: -1;
+    }
+    #aboutPart .item .circle{
+        display: block;
+        bottom: -43px;
+        left: 48%;
+    }
+    #aboutPart .item2{
+        margin: 15px auto;
+        text-align: center;
+        width: 250px;
+        padding: 12px;
+    }
+    #aboutPart .item2:hover{
+        box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+    }
+    #aboutPart .item2 p{
+        width: auto;
+    }
+    #aboutPart .item2 .shape{
+        display: block;
+        right: 5px;
+    }
+    #aboutPart .item2 .circle{
+        display: block;
+        right: -47px;
+    }
+    #aboutPart .roundimg{
+        width: 150px;
+        height: 150px;
+        margin: 30px auto;
+    }
+    #aboutPart .roundimg .imge{
+        width: 130px;
+        height: 130px;
+    }
+    
+    #aboutPart .item3{
+        margin: 15px auto;
+        text-align: center;
+        width: 250px;
+        padding: 12px;
+    }
+    #aboutPart .item3:hover{
+        box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+    }
+    #aboutPart .item3 p{
+        width: auto;
+    }
+    #aboutPart .item3 .shape{
+        display: block;
+        left: -35px;
+        z-index: -1;
+    }
+    #aboutPart .item3 .circle{
+        display: block;
+        left: -54px;
+    }
+    #aboutPart .item4{
+        margin: 15px auto;
+        text-align: center;
+        width: 250px;
+        padding: 12px;
+    }
+    #aboutPart .item4:hover{
+        box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+    }
+    #aboutPart .item4 p{
+        width: auto;
+    }
+    #aboutPart .item4 .shape{
+        display: block;
+        top: 5px;
+        z-index: -1;
+    }
+    #aboutPart .item4 .circle{
+        display: block;
+        top: -57px;
+    }
+    
+    /* =========protfolio responsive start============ */
+    #protfolio{
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    }
+    #protfolio .title p{
+        width: auto;
+        padding: 0 70px;
+    }
+    #protfolio .overlay{
+        padding: 60px 0;
+    }
+    #protfolio .overlay .pslide{
+        margin-left: 20px;
+    }
+  
+    /* =========protfolio responsive end============ */
+    /* =========service responsive start============ */
+    #service .title p{
+        width: auto;
+        padding: 0 70px;
+    }
+    #service .slideup::after{
+        display: block;
+        position: absolute !important;
+        top: -24px !important;
+        height: 102.7% !important;
+    }
+    #service .slideup .lghide{
+        display: none;
+    }
+    #service .slideup .smhide{
+       display: block !important;
+    }
+    #service .part1{
+        text-align: center;
+        margin: 0 20px;
+    }
+    #service .part1 h3{
+        margin-top: 150px;
+        text-align: right;
+        display: inherit;
+    }
+    #service .part2 .img{
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+    #service .part3 p{
+        width: auto;
+        text-align: center;
+        padding: 25px 35px;
+    } 
+    #service .part3{
+        margin: 0 20px;
+    }
+    #service .part3 .shape{
+        background: #f1f1f1;
+        top: 50%;
+        left: 0%;
+    }
+    #service .part4{
+        text-align: center;
+        margin: 0 20px;
+    }
+    #service .part4 p{
+        width: auto;
+        padding: 25px 35px;
+    }
+    #service .part4 .shape{
+        background: #f1f1f1;
+        top: 50%;
+        right: 0%;
+    }
+    #service .part5 .img{
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+    #service .part6 h3{
+        margin-top: 150px;
+        text-align: left;
+        display: inherit;
+    }
+    #service .slideup .slick-center .img{
+        transform: scale(1.2);
+        background: #fec600;
+     }
+    .srvcup{
+        top: -10%;
+    }
+    .srvcdown{
+        bottom: -80px;
+    }
+    /* =========service responsive end============ */
+    /* =========testimonial responsive start============ */
+    #testimonial{
+        clip-path: polygon(0 5%, 100% 0, 100% 98%, 0% 100%);
+        border-top: 1px solid #bebebe;
+        box-shadow: -1px 0px 5px 1px rgba(0,0,0,0.75);
+        text-align: center;
+        width: auto;
+    }
+    #testimonial .overlay{
+        padding: 110px 0;
+    }
+    #testimonial .overlay .imgslide .img {
+        width: 30%;
+        transform: scale(.8);
+        margin-left: 14px;
+    }
+    #testimonial .overlay .imgslide .slick-center{
+        transform: scale(1);
+        background: #fec600;
+    }
+    #testimonial .overlay .imgslide::after{
+        display: block;
+        top: -5px;
+        left: 68px;
+        z-index: -1;
+    }
+    #testimonial .overlay .jamela{
+        margin: 0 auto;
+    }
+    #testimonial .overlay .textslider .item{
+        margin-top: 65px;
+        text-align: left;
+        margin-left: 25px;
+        margin-right: 10px;
+        padding: 30px 15px;
+    }
+    #testimonial .overlay .textslider .item p{
+        width: auto;
+    }
+    #testimonial .overlay .textslider .item .shape{
+        display: block;
+        left: 5px;
+        z-index: -1;
+    }
+    .tup {
+        padding: 10px;
+        top: -15%;
+        left: 60%;
+    }
+    .tdown{
+        padding: 10px;
+        bottom: -90px;
+        right: 48%;
+    }
+    /* =========testimonial responsive end============ */
+    /* =========pricing responsive end============ */
+    #pricing .title p{
+        width: auto;
+        padding: 0 70px;
+    }
+    #pricing .item{
+        margin-bottom: 10px;
+    }
+    
+    /* =========pricing responsive end============ */
+    /* =========counter responsive start============ */
+    #counter .overlay .item{
+        width: 136px;
+        padding: 20px 0px;
+        transform: skewX(3deg);
+        margin: 30px auto;
+    }
+    /* =========team responsive start============ */
+    #teamPart .title p{
+        width: auto;
+        padding: 0 70px;
+    }
+    #teamPart .member .item .text .sicon ul{
+        left: 5px;
+    }
+    /* =========team responsive end============ */
+    /* =========footer responsive start============ */
+    #footerPart .addres .item{
+        text-align: center;
+        margin-top: 40px;
+    }
+    #footerPart .social ul li{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    #footerPart .copyr p{
+        font-size: 14px;
+    }
+    /* =========footer responsive end============ */
+    
+}
 
+/* ============================================= 992-1199 device end====================================== */
 
+@media (min-width:992px) and (max-width:1199px){
 
+    /* ============= manu bar responsive css start=============== */
+        
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+    }
+/* ============= manu bar responsive css end=============== */
+/* ============= banner responsive css start=============== */
+
+/* ============= banner responsive css end=============== */
+#aboutPart {
+    padding-top: 30px;
+    border-top: 1px solid #bebebe;
+    box-shadow: -1px 0px 5px 1px rgba(0,0,0,0.75);
+    text-align: center;
+}
+#aboutPart .title p{
+    padding: 0 160px;
+    width: auto;
+}
+#aboutPart .item{
+    margin: 15px auto;
+    width: 340px;
+    padding: 20px 30px;
+}
+#aboutPart .item:hover{
+    box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item p{
+    width: auto;
+}
+#aboutPart .item .shape{
+    display: block;
+    bottom: 0px;
+    z-index: -1;
+}
+#aboutPart .item .circle{
+    display: block;
+    bottom: -43px;
+    left: 48%;
+}
+#aboutPart .item2{
+    margin: 47px 2px;
+    text-align: center;
+    width: 320px;
+    padding: 20px 34px;
+}
+
+#aboutPart .item2:hover{
+    box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item2 p{
+    width: auto;
+}
+#aboutPart .item2 .shape{
+    display: block;
+    right: 5px;
+}
+#aboutPart .item2 .circle{
+    display: block;
+    right: -47px;
+}
+#aboutPart .roundimg{
+    width: 240px;
+    height: 240px;
+    margin: 30px auto;
+}
+#aboutPart .roundimg .imge{
+    width: 210px;
+    height: 210px;
+}
+
+#aboutPart .item3{
+    margin: 47px 4px;
+    text-align: left;
+    width: 320px;
+    padding: 20px 46px;
+}
+#aboutPart .item3:hover{
+    box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item3 p{
+    width: auto;
+}
+#aboutPart .item3 .shape{
+    display: block;
+    left: -35px;
+    z-index: -1;
+}
+#aboutPart .item3 .circle{
+    display: block;
+    left: -54px;
+}
+#aboutPart .item4{
+    margin: 15px auto;
+    width: 340px;
+    padding: 20px 30px;
+}
+#aboutPart .item4:hover{
+    box-shadow: 0px 3px 21px -3px rgba(0,0,0,0.75);
+}
+#aboutPart .item4 p{
+    width: auto;
+}
+#aboutPart .item4 .shape{
+    display: block;
+    top: 5px;
+    z-index: -1;
+}
+#aboutPart .item4 .circle{
+    display: block;
+    top: -57px;
+}
+
+/* =========protfolio responsive start============ */
+#protfolio{
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+}
+#protfolio .title p{
+    width: auto;
+    padding: 0 160px;
+}
+#protfolio .overlay{
+    padding: 60px 0;
+}
+#protfolio .overlay .pslide{
+    margin-left: 20px;
+}
+
+/* =========protfolio responsive end============ */
+/* =========service responsive start============ */
+#service .title p{
+    width: auto;
+    padding: 0 160px;
+}
+#service .slideup::after{
+    display: block;
+    position: absolute !important;
+    top: -24px !important;
+    height: 102.7% !important;
+}
+#service .slideup .lghide{
+    display: none;
+}
+#service .slideup .smhide{
+   display: block !important;
+}
+#service .part1{
+    text-align: center;
+    margin: 0 20px;
+}
+#service .part1 h3{
+    margin-top: 94px;
+    text-align: right;
+    display: inherit;
+}
+#service .part2 .img{
+    margin-top: 67px;
+    margin-bottom: 30px;
+}
+#service .part3 p{
+    width: auto;
+    text-align: center;
+    padding: 25px 35px;
+} 
+#service .part3{
+    margin: 0 20px;
+}
+#service .part3 .shape{
+    background: #f1f1f1;
+    top: 50%;
+    left: 0%;
+}
+#service .part4{
+    text-align: center;
+    margin: 0 20px;
+}
+#service .part4 p{
+    width: auto;
+    padding: 25px 35px;
+}
+#service .part4 .shape{
+    background: #f1f1f1;
+    top: 50%;
+    right: 0%;
+}
+#service .part5 .img{
+    margin-top: 67px;
+    margin-bottom: 30px;
+}
+#service .part6 h3{
+    margin-top: 94px;
+    text-align: left;
+    display: inherit;
+}
+#service .slideup .slick-center .img{
+    transform: scale(1.2);
+    background: #fec600;
+ }
+.srvcup{
+    top: -10%;
+}
+.srvcdown{
+    bottom: -80px;
+}
+/* =========service responsive end============ */
+/* =========testimonial responsive start============ */
+#testimonial{
+    clip-path: polygon(0 5%, 100% 0, 100% 98%, 0% 100%);
+    border-top: 1px solid #bebebe;
+    box-shadow: -1px 0px 5px 1px rgba(0,0,0,0.75);
+    text-align: center;
+    width: auto;
+}
+#testimonial .overlay{
+    padding: 110px 0;
+}
+#testimonial .overlay .imgslide .img {
+    width: 30%;
+    transform: scale(.8);
+    margin-left: 14px;
+}
+#testimonial .overlay .imgslide .slick-center{
+    transform: scale(1);
+    background: #fec600;
+}
+#testimonial .overlay .imgslide::after{
+    display: block;
+    top: -5px;
+    left: 68px;
+    z-index: -1;
+}
+#testimonial .overlay .jamela{
+    margin: 0 auto;
+}
+#testimonial .overlay .textslider .item{
+    margin-top: 65px;
+    text-align: left;
+    margin-left: 25px;
+    margin-right: 10px;
+    padding: 30px 15px;
+}
+#testimonial .overlay .textslider .item p{
+    width: auto;
+}
+#testimonial .overlay .textslider .item .shape{
+    display: block;
+    left: 5px;
+    z-index: -1;
+}
+.tup {
+    padding: 10px;
+    top: -15%;
+    left: 44%;
+}
+.tdown{
+    padding: 10px;
+    bottom: -90px;
+    right: 57%;
+}
+/* =========testimonial responsive end============ */
+/* =========pricing responsive end============ */
+#pricing .title p{
+    width: auto;
+    padding: 0 160px;
+}
+#pricing .item{
+    margin-bottom: 10px;
+}
+
+/* =========pricing responsive end============ */
+/* =========counter responsive start============ */
+#counter .overlay .item{
+    width: 136px;
+    padding: 20px 0px;
+    transform: skewX(3deg);
+    margin: 30px auto;
+}
+/* =========team responsive start============ */
+#teamPart .title p{
+    width: auto;
+    padding: 0 160px;
+}
+#teamPart .member .item .text .sicon ul{
+    left: 5px;
+}
+/* =========team responsive end============ */
+/* =========footer responsive start============ */
+#footerPart .addres .item{
+    text-align: center;
+    margin-top: 40px;
+}
+#footerPart .social ul li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#footerPart .addres .item .ltn{
+    font-size: 14px;
+}
+#footerPart .copyr p{
+    font-size: 14px;
+}
+/* =========footer responsive end============ */
+}
 
 
 
