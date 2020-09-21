@@ -1,23 +1,36 @@
+// const spyscroll=()=>{
+//   const section = document.querySelectorAll('section')
+//   window.onscroll = ()=>{
+//       const scrollposition = document.documentElement.scrollTop || document.body.scrollTop
+//       section.forEach((item)=>{
+//           if(item.offsetTop <= scrollposition){
+//               document.querySelector("li.active").classList.remove("active")
+//           } else{
+//             document.querySelector("li.active").classList.add("active")
+//           }
+          
+//       })
+//   }
+  
+// }
 
+// const smooth = ()=>{
+//   const links = document.querySelectorAll(".nav-link")
+//   links.forEach((item)=>{
+//       item.addEventListener("click",function(event){
+//           event.preventDefault();
+//           document.querySelector(item.hash)
+//           .scrollIntoView({
+//               behavior: "smooth"
+//           })
+          
 
-  const spyscrll = ()=>{
-    const section = document.querySelectorAll("section")
-    window.onscroll = ()=>{
-      const sposition = document.documentElement.scrollTop || document.body.scrollTop
-      section.forEach((item)=>{
-       if(item.offsetTop <= sposition){
-         const id = item.id
-         document.querySelector(".active").classList.remove("active")
-         document.querySelectorAll(`a[href*=${id}]`).parentNode.classList.add("active")
-         console.log(item)
-        
-       }
-      })
-    }
-  }
-  spyscrll(),
+//       })
+//   })
+// }
 
-
+// spyscroll()
+// smooth()
 
 
 
@@ -39,6 +52,10 @@ $(window).scroll(function(){
     $(".btop").fadeOut();
   }
 })
+
+
+
+
 $(".btop").click(function(){
 $("html,body").animate({
   scrollTop:0
@@ -46,6 +63,8 @@ $("html,body").animate({
 }),
 
 
+
+new WOW().init();
 
 
 //  =================== banner slider start ==========================
@@ -275,7 +294,8 @@ $('#bannnerPart').slick({
 //  ===================  testimonial slider end ====================
 // ============ counter up==============
 
-let counter = document.querySelectorAll(".counter")
+window.onscroll = ()=>{
+  let counter = document.querySelectorAll(".counter")
 let counterarr = Array.from(counter)
 counterarr.map((item)=>{
   let i = 0
@@ -292,6 +312,7 @@ counterarr.map((item)=>{
     counterjs()
   }, speed);
 })
+},
 // ==================counter end====================
 
 // ==================team prat start====================

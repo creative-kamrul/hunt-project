@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/venobox.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".menu">
 
 <!-- ==================================================================================================
                                            manu bar start
@@ -29,8 +30,8 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link active" href="#bannnerPart">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#aboutPart">About us </a>
@@ -107,7 +108,7 @@
 ================================================================================================== -->
 <section id="aboutPart">
   <div class="title">
-    <h3>About us</h3>
+    <h3 class="wow bounceInUp">About us</h3>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the industry's standard dummy text ever since the 1500s.</p>
   </div>
   <div class="container">
@@ -628,23 +629,23 @@
     <div class="container">
       <div class="row">
           <div class="item">
-            <h2 class="counter" data-number="230" data-speed="10"></h2>
+            <h2 class="counter" data-number="230" data-speed="5"></h2>
           <p>Total Clients</p>
           </div>
           <div class="item">
-            <h2 class="counter" data-number="330" data-speed="10"></h2>
+            <h2 class="counter" data-number="330" data-speed="5"></h2>
           <p>Satisfied Clients</p>
           </div>
           <div class="item">
-            <h2 class="counter" data-number="130" data-speed="10"></h2>
+            <h2 class="counter" data-number="130" data-speed="5"></h2>
           <p>Reviewed Client</p>
           </div>
           <div class="item cml1">
-            <h2 class="counter" data-number="430" data-speed="10"></h2>
+            <h2 class="counter" data-number="430" data-speed="5"></h2>
           <p>Cup of Tea</p>
           </div>
           <div class="item cml2">
-            <h2 class="counter" data-number="530" data-speed="10"></h2>
+            <h2 class="counter" data-number="530" data-speed="5"></h2>
           <p> Milestone Client</p>
           </div>
       </div>
@@ -879,6 +880,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/venobox.min.js"></script>
     <script src="js/script.js"></script>
 </body>

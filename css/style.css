@@ -11,6 +11,9 @@ h1,h2,h3,h4,h5,h6{
 ol,ul{
     list-style: none;
 }
+html,body{
+    scroll-behavior: smooth;
+}
 
 
 a,a:hover,a:focus{
@@ -97,6 +100,12 @@ nav .navbar-collapse ul li:hover a{
     color: #fec600;
 }
 nav .navbar-collapse ul li:hover a::after{
+    width: 100%;
+}
+nav .navbar-collapse ul li .active{
+    color: #fec600;
+}
+nav .navbar-collapse ul li .active::after{
     width: 100%;
 }
 .fixed{
@@ -1189,6 +1198,7 @@ box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
     background: #f1f1f1;
     padding: 30px 0;
     transform: skewY(-3deg);
+    margin-bottom: 100px;
 }
 #addPart .aditem{
     display: flex;
@@ -1232,7 +1242,7 @@ box-shadow: 1px 3px 32px -3px rgba(0,0,0,0.75);
 #footerPart{
     background: #222222;
    position: relative;
-   margin-top: 100px;
+   padding-top: 100px;
 }
 #footerPart .flogo{
     transform: skewY(-3deg);
